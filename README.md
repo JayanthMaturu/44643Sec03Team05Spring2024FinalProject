@@ -1,5 +1,5 @@
 # 44643Sec03Team06Spring2024FinalProject
-Repository for IOS final project
+
 We are planning to develop Dr. Online app. This app brings the user to  make Doctors appointment by entering his/her symptoms which will predict diseases and list the famous  doctors related to diseases  and the user will be able to track all his previous doctor consultations and also download the reports. Doctors are only capable of editing updating the patients’ records.
 The main target users of our app are Patients ,Doctors.
 
