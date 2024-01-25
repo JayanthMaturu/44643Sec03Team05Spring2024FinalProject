@@ -5,9 +5,9 @@ The main target users of our app are Patients ,Doctors.
 
 The features that we  would like to implement is to predict the diseases based on the user entered symptoms. User can make appointment of desired doctor through online which makes very user-friendly interface .
 
- Roles and Responsibilities: -
-Jayanth Maturu – Implementation of User Interface
-Gomathi Nagiri - Implementation of Machine learning part
-Jahnavi Chava - Integration of ML to application
-Varun Kumar Bhavanam - Handling database for the application
+ Roles and Responsibilities: - <br>
+Jayanth Maturu – Implementation of User Interface<br>
+Gomathi Nagiri - Implementation of Machine learning part<br>
+Jahnavi Chava - Integration of ML to application<br>
+Varun Kumar Bhavanam - Handling database for the application<br>
 
