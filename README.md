@@ -5,6 +5,8 @@ The main target users of our app are Patients ,Doctors.
 
 The features that we  would like to implement is to predict the diseases based on the user entered symptoms. User can make appointment of desired based on rating doctor through online which makes very user-friendly interface .
 
+Everyone started Working on individual task collected dataset for diseases prediction using symptoms list. choosen logo for project.
+
 Prototype:- <br><br>
 ![image](https://github.com/JayanthMaturu/44643Sec03Team05Spring2024FinalProject/assets/143036932/2740f577-9aea-4d5b-84d2-8c1f79e4df65)  <br>
 •	User will be redirected to Signup page/ login page based on the selection in launch screen <br>
@@ -16,6 +18,8 @@ Prototype:- <br><br>
 
 ![image](https://github.com/JayanthMaturu/44643Sec03Team05Spring2024FinalProject/assets/143036932/d17d1e51-9c90-42ad-9a96-0847e7068b58) <br>
 •	Once the doctor logs in the doctor home screen will appear. <br><br>
+
+
 
 
  Roles and Responsibilities: - <br>
