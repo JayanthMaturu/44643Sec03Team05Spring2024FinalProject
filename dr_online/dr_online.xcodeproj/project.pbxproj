@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4A9F2FB32B97100800FEAD3A /* dataset in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F2FB22B97100800FEAD3A /* dataset */; };
+		4A9F2FB62B990E7700FEAD3A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4A9F2FB52B990E7700FEAD3A /* Alamofire */; };
+		4A9F2FB82B990E7700FEAD3A /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 4A9F2FB72B990E7700FEAD3A /* AlamofireDynamic */; };
+		4A9F2FBB2B990E8900FEAD3A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4A9F2FBA2B990E8900FEAD3A /* Lottie */; };
 		5E3A9BE32B8437EC009576EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE22B8437EC009576EA /* AppDelegate.swift */; };
 		5E3A9BE52B8437EC009576EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE42B8437EC009576EA /* SceneDelegate.swift */; };
 		5E3A9BE72B8437EC009576EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE62B8437EC009576EA /* ViewController.swift */; };
@@ -33,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9F2FB62B990E7700FEAD3A /* Alamofire in Frameworks */,
+				4A9F2FB82B990E7700FEAD3A /* AlamofireDynamic in Frameworks */,
+				4A9F2FBB2B990E8900FEAD3A /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,11 @@
 			dependencies = (
 			);
 			name = dr_online;
+			packageProductDependencies = (
+				4A9F2FB52B990E7700FEAD3A /* Alamofire */,
+				4A9F2FB72B990E7700FEAD3A /* AlamofireDynamic */,
+				4A9F2FBA2B990E8900FEAD3A /* Lottie */,
+			);
 			productName = dr_online;
 			productReference = 5E3A9BDF2B8437EC009576EA /* dr_online.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +133,10 @@
 				Base,
 			);
 			mainGroup = 5E3A9BD62B8437EC009576EA;
+			packageReferences = (
+				4A9F2FB42B990E7700FEAD3A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4A9F2FB92B990E8900FEAD3A /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 5E3A9BE02B8437EC009576EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -373,6 +388,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4A9F2FB42B990E7700FEAD3A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+		4A9F2FB92B990E8900FEAD3A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4A9F2FB52B990E7700FEAD3A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A9F2FB42B990E7700FEAD3A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		4A9F2FB72B990E7700FEAD3A /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A9F2FB42B990E7700FEAD3A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		4A9F2FBA2B990E8900FEAD3A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A9F2FB92B990E8900FEAD3A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5E3A9BD72B8437EC009576EA /* Project object */;
 }
