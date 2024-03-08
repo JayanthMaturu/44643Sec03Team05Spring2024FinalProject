@@ -44,13 +44,44 @@ class LoginViewController: UIViewController {
             
         }
     }
+    
+    @IBAction func signUpBTN(_ sender: UIButton) {
+        let signupVC =  self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        self.navigationController?.pushViewController(signupVC, animated: true);
+    }
+    
+    @IBAction func forgetBTN(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Forgot Password", message: "Enter your email to reset your password", preferredStyle: .alert)
         
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            // Do any additional setup after loading the view.
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Email"
+            textField.keyboardType = .emailAddress
         }
         
+        // Add "Cancel" and "Reset" buttons
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Reset", style: .default, handler: { [weak self] _ in
+            // Perform password reset logic here
+            if let email = alertController.textFields?.first?.text, !email.isEmpty {
+                // Show confirmation that password reset link has been sent
+                self?.showAlert(message: "Password reset link sent to \(email)")
+            } else {
+                // Show alert if email field is empty
+                self?.showAlert(message: "Please enter your email.")
+            }
+        }))
+        
+        // Present the alert
+        present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+}
+        extension UIViewController {
         func showAlert(message: String) {
             let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -58,4 +89,13 @@ class LoginViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }
     }
+
+//extension UIViewController {
+//    func showAlert(message: String) {
+//        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+//        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//        alert.addAction(okAction)
+//        present(alert, animated: true, completion: nil)
+//    }
+//}
 

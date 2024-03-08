@@ -84,6 +84,9 @@
                                         <rect key="frame" x="111.00000000000001" y="429" width="151.33333333333337" height="36"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forget Password"/>
+                                        <connections>
+                                            <action selector="forgetBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgZ-gf-qoJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMT-7t-NGJ">
                                         <rect key="frame" x="153.66666666666666" y="498.33333333333331" width="65.666666666666657" height="43.333333333333314"/>
@@ -111,6 +114,7 @@
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                                 <connections>
+                                                    <action selector="signUpBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jbm-J9-vce"/>
                                                     <segue destination="HY1-GV-fEt" kind="show" id="ouz-vG-v9j"/>
                                                 </connections>
                                             </button>
@@ -134,7 +138,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="h6B-D1-fbA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BSl-kG-qJA"/>
                             <constraint firstAttribute="trailing" secondItem="3gh-zs-8du" secondAttribute="trailing" constant="10" id="Qbu-QR-oRh"/>
