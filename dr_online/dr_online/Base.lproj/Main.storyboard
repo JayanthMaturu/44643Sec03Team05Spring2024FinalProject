@@ -29,6 +29,7 @@
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DoctorOnline" translatesAutoresizingMaskIntoConstraints="NO" id="E0o-Ce-8WH">
                                         <rect key="frame" x="0.0" y="74.333333333333357" width="373" height="215.66666666666663"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.63740965140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8w9-yY-6eT" userLabel="empsSV">
                                         <rect key="frame" x="65.666666666666671" y="323.66666666666669" width="241.66666666666663" height="71.666666666666686"/>
@@ -165,7 +166,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="sIP-8y-CvY">
             <objects>
-                <viewController id="HY1-GV-fEt" customClass="SignUpViewController" customModule="dr_online" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HY1-GV-fEt" customClass="SignUpViewController" customModule="dr_online" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LCU-cg-xCF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,7 +240,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lIJ-Ae-sLt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lIJ-Ae-sLt" firstAttribute="trailing" secondItem="OVY-zt-TvE" secondAttribute="trailing" constant="20" id="Ovb-or-Gef"/>
                             <constraint firstItem="OVY-zt-TvE" firstAttribute="leading" secondItem="lIJ-Ae-sLt" secondAttribute="leading" constant="20" id="d9f-qe-9wU"/>
