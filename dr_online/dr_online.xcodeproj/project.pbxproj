@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26A871DF2B9C179000B095E9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 26A871DE2B9C179000B095E9 /* Alamofire */; };
+		26A871E12B9C179000B095E9 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 26A871E02B9C179000B095E9 /* AlamofireDynamic */; };
+		26A871E32B9C180400B095E9 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A871E22B9C180400B095E9 /* APIModel.swift */; };
 		5E3A9BE32B8437EC009576EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE22B8437EC009576EA /* AppDelegate.swift */; };
 		5E3A9BE52B8437EC009576EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE42B8437EC009576EA /* SceneDelegate.swift */; };
 		5E3A9BE72B8437EC009576EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE62B8437EC009576EA /* LoginViewController.swift */; };
@@ -46,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26A871E22B9C180400B095E9 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		5E3A9BDF2B8437EC009576EA /* dr_online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dr_online.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E3A9BE22B8437EC009576EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E3A9BE42B8437EC009576EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 				5EB254EA2B96C1BE00194E2D /* FirebaseAppDistribution-Beta in Frameworks */,
 				5EB254EE2B96C1BE00194E2D /* FirebaseAuthCombine-Community in Frameworks */,
 				5EB254FA2B96C1BE00194E2D /* FirebaseFirestoreCombine-Community in Frameworks */,
+				26A871E12B9C179000B095E9 /* AlamofireDynamic in Frameworks */,
 				5EB254E42B96C1BE00194E2D /* FirebaseAnalyticsSwift in Frameworks */,
 				5EB255082B96C1BE00194E2D /* FirebaseMLModelDownloader in Frameworks */,
 				5EB254E62B96C1BE00194E2D /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -84,6 +89,7 @@
 				5EB255062B96C1BE00194E2D /* FirebaseInstallations in Frameworks */,
 				5EB2550E2B96C1BE00194E2D /* FirebaseRemoteConfig in Frameworks */,
 				5EB255122B96C1BE00194E2D /* FirebaseStorage in Frameworks */,
+				26A871DF2B9C179000B095E9 /* Alamofire in Frameworks */,
 				5EB254F22B96C1BE00194E2D /* FirebaseDatabase in Frameworks */,
 				5EB255142B96C1BE00194E2D /* FirebaseStorageCombine-Community in Frameworks */,
 				5EB051192B90395500F34C0F /* Lottie in Frameworks */,
@@ -120,6 +126,7 @@
 				5E3A9BE62B8437EC009576EA /* LoginViewController.swift */,
 				5E704AF22B97DCB8002BDD73 /* SignUpViewController.swift */,
 				5E3A9BE82B8437EC009576EA /* Main.storyboard */,
+				26A871E22B9C180400B095E9 /* APIModel.swift */,
 				5E3A9BEB2B8437F0009576EA /* Assets.xcassets */,
 				5E3A9BED2B8437F0009576EA /* LaunchScreen.storyboard */,
 				5E3A9BF02B8437F0009576EA /* Info.plist */,
@@ -182,6 +189,8 @@
 				5EB2550F2B96C1BE00194E2D /* FirebaseRemoteConfigSwift */,
 				5EB255112B96C1BE00194E2D /* FirebaseStorage */,
 				5EB255132B96C1BE00194E2D /* FirebaseStorageCombine-Community */,
+				26A871DE2B9C179000B095E9 /* Alamofire */,
+				26A871E02B9C179000B095E9 /* AlamofireDynamic */,
 			);
 			productName = dr_online;
 			productReference = 5E3A9BDF2B8437EC009576EA /* dr_online.app */;
@@ -214,6 +223,7 @@
 			packageReferences = (
 				5EB051172B90395500F34C0F /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				5EB254DE2B96C1BE00194E2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				26A871DD2B9C179000B095E9 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 5E3A9BE02B8437EC009576EA /* Products */;
 			projectDirPath = "";
@@ -247,6 +257,7 @@
 				5E3A9BE32B8437EC009576EA /* AppDelegate.swift in Sources */,
 				5E704AF32B97DCB8002BDD73 /* SignUpViewController.swift in Sources */,
 				5E3A9BE52B8437EC009576EA /* SceneDelegate.swift in Sources */,
+				26A871E32B9C180400B095E9 /* APIModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +480,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		26A871DD2B9C179000B095E9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
 		5EB051172B90395500F34C0F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -488,6 +507,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		26A871DE2B9C179000B095E9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26A871DD2B9C179000B095E9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		26A871E02B9C179000B095E9 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26A871DD2B9C179000B095E9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
 		5EB051182B90395500F34C0F /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5EB051172B90395500F34C0F /* XCRemoteSwiftPackageReference "lottie-ios" */;
