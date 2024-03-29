@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -21,9 +22,49 @@ class LoginViewController: UIViewController {
                     }
                 }
     }
+    
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    @IBAction func loginbutton(_ sender: Any) {
+        guard let email = emailTF.text, let password = passwordTF.text else { return }
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            guard let strongSelf = self else { return }
+            if error != nil {
+                self?.alert(message: "Invalid Username/ Password. Try Again")
+            } else {
+                print("reached here")
+                self?.performSegue(withIdentifier: "homescreensegue", sender: nil)
+            }
+        }
+    }
+    
+    @IBAction func forgetpassword(_ sender: Any) {
+        guard let email = emailTF.text, !email.isEmpty else {
+                    alert(message: "enter email address.")
+                    return
+                }
+
+                Auth.auth().sendPasswordReset(withEmail: email) { error in
+                    if let error = error {
+                        // Handle password reset error
+                        print("Password reset error: \(error.localizedDescription)")
+                    } else {
+                        // Password reset email sent successfully
+                        self.alert(message: "Password reset email sent successfully")
+                    }
+                }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    private func alert(message : String){
+        let alert = UIAlertController(title: "Password", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default){ (action) in
+        })
+        present(alert, animated: true, completion: nil)
     }
 
 
