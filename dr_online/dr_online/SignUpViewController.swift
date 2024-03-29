@@ -61,6 +61,10 @@ class SignUpViewController: UIViewController {
         }
         
         let isUserCreated = self.signUpUser(email: email, password: password, name: name, age: age, gender: genderSC.selectedSegmentIndex == 0 ? "Male" : "Female", phoneNumber: phone)
+        if (isUserCreated){
+            alert(message: "User Created Successfully")
+            performSegue(withIdentifier: "homescreensegue", sender: nil)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
