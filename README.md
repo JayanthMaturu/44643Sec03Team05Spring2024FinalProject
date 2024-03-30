@@ -7,7 +7,7 @@ The features that we  would like to implement is to predict the diseases based o
 
 Everyone started Working on individual task collected dataset for diseases prediction using symptoms list. choosen logo for project.
 
-Implemented Sign up and login page and created ml and started api.
+Implemented Sign up and login page and created ml and started api.Completed the ui part for ml and firebase database yet to use for storing patient information and use for download option.
 
 Prototype:- <br><br>
 ![image](https://github.com/JayanthMaturu/44643Sec03Team05Spring2024FinalProject/assets/143036932/2740f577-9aea-4d5b-84d2-8c1f79e4df65)  <br>
