@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "DoctorOnline.jpg",
+      "filename" : "reports.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "DoctorOnline 1.jpg",
+      "filename" : "reports 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "DoctorOnline 2.jpg",
+      "filename" : "reports 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
