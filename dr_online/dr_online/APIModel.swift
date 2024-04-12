@@ -30,14 +30,12 @@ struct DataManager {
         let response = await task.response
         guard let jsonData = response.value else {return}
     }
-    
     do {
-                let response = try await AF.request(url).responseDecodable(of: [Doctor].self)
-                self.doctors = response.value?.map { doctorDetails(id: $0.id, doctorsName: $0.Doctors) } ?? []
-            } catch {
-                print("Error loading doctors: \(error)")
-        
+        let response = try await AF.request(url).responseDecodable(of: [doctor].self)
+        self.doctors = response.value?.map { doctorDetails(id: $0.id, doctorsName: $0.doctors) } ?? []
+    } catch {
+        print("Error loading doctors: \(error)")
     }
-    
+
     
 }
