@@ -10,15 +10,16 @@ import Alamofire
 
 struct doctor:Codable{
     var id: Int
-    var Doctors: String
+    var doctors: String
     var Diseases: String
 }
-struct doctorDeets {
+struct doctorDetails {
     var id: Int
     var doctorsName: String
 }
 struct DataManager {
-    private(set) var doctors = [doctorDeets]()
+    private(set) var doctors = [doctorDetails]()
+    
     func loadMenu() async{
         
         let url =  "https://retoolapi.dev/x1twmd/data"
@@ -31,10 +32,10 @@ struct DataManager {
     }
     
     do {
-        let response = try await AF.request(url).responseDecodable(of: [Doctor].self)
-        self.doctors = response.value ?? []
-    } catch {
-        print("Error loading doctors: \(error)")
+                let response = try await AF.request(url).responseDecodable(of: [Doctor].self)
+                self.doctors = response.value?.map { doctorDetails(id: $0.id, doctorsName: $0.Doctors) } ?? []
+            } catch {
+                print("Error loading doctors: \(error)")
         
     }
     
