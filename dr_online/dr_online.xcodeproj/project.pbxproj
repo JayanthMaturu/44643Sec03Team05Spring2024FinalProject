@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ADA9F9B2BC98FCF00C64B26 /* dataset in Resources */ = {isa = PBXBuildFile; fileRef = 4ADA9F9A2BC98FCF00C64B26 /* dataset */; };
+		4ADA9F9D2BC9916B00C64B26 /* predictdisease 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA9F9C2BC9916B00C64B26 /* predictdisease 1.mlmodel */; };
+		4ADA9F9F2BC9918C00C64B26 /* predictdisease.mlproj in Resources */ = {isa = PBXBuildFile; fileRef = 4ADA9F9E2BC9918C00C64B26 /* predictdisease.mlproj */; };
 		5E09800C2BABE78A008502FE /* SelfTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09800B2BABE78A008502FE /* SelfTestVC.swift */; };
 		5E19D7472BA9F81700BEF110 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19D7462BA9F81700BEF110 /* HomeScreenVC.swift */; };
 		5E3A9BE32B8437EC009576EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE22B8437EC009576EA /* AppDelegate.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4ADA9F9A2BC98FCF00C64B26 /* dataset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dataset; sourceTree = "<group>"; };
+		4ADA9F9C2BC9916B00C64B26 /* predictdisease 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "predictdisease 1.mlmodel"; sourceTree = SOURCE_ROOT; };
+		4ADA9F9E2BC9918C00C64B26 /* predictdisease.mlproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = predictdisease.mlproj; sourceTree = SOURCE_ROOT; };
 		5E09800B2BABE78A008502FE /* SelfTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfTestVC.swift; sourceTree = "<group>"; };
 		5E19D7462BA9F81700BEF110 /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
 		5E3A9BDF2B8437EC009576EA /* dr_online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dr_online.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +126,9 @@
 		5E3A9BE12B8437EC009576EA /* dr_online */ = {
 			isa = PBXGroup;
 			children = (
+				4ADA9F9E2BC9918C00C64B26 /* predictdisease.mlproj */,
+				4ADA9F9C2BC9916B00C64B26 /* predictdisease 1.mlmodel */,
+				4ADA9F9A2BC98FCF00C64B26 /* dataset */,
 				5E3A9BF72B8438A9009576EA /* SupportingFiles */,
 				5E3A9BE62B8437EC009576EA /* LoginViewController.swift */,
 				5E704AF22B97DCB8002BDD73 /* SignUpViewController.swift */,
@@ -235,7 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ADA9F9F2BC9918C00C64B26 /* predictdisease.mlproj in Resources */,
 				5E3A9BEF2B8437F0009576EA /* LaunchScreen.storyboard in Resources */,
+				4ADA9F9B2BC98FCF00C64B26 /* dataset in Resources */,
 				5EB254DD2B96C12600194E2D /* GoogleService-Info.plist in Resources */,
 				5E3A9BEC2B8437F0009576EA /* Assets.xcassets in Resources */,
 				5E3A9BEA2B8437EC009576EA /* Main.storyboard in Resources */,
@@ -251,6 +262,7 @@
 			files = (
 				5E3A9BE72B8437EC009576EA /* LoginViewController.swift in Sources */,
 				5E3A9BE32B8437EC009576EA /* AppDelegate.swift in Sources */,
+				4ADA9F9D2BC9916B00C64B26 /* predictdisease 1.mlmodel in Sources */,
 				5E704AF32B97DCB8002BDD73 /* SignUpViewController.swift in Sources */,
 				5E19D7472BA9F81700BEF110 /* HomeScreenVC.swift in Sources */,
 				5E09800C2BABE78A008502FE /* SelfTestVC.swift in Sources */,
