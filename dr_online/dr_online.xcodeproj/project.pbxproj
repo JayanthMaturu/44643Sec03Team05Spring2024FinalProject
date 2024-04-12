@@ -45,6 +45,7 @@
 		5EB255102B96C1BE00194E2D /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5EB2550F2B96C1BE00194E2D /* FirebaseRemoteConfigSwift */; };
 		5EB255122B96C1BE00194E2D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5EB255112B96C1BE00194E2D /* FirebaseStorage */; };
 		5EB255142B96C1BE00194E2D /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5EB255132B96C1BE00194E2D /* FirebaseStorageCombine-Community */; };
+		F8905D542BC969E40051E790 /* reportpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8905D532BC969E40051E790 /* reportpageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		5E3A9BF02B8437F0009576EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E704AF22B97DCB8002BDD73 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5EB254DC2B96C12600194E2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F8905D532BC969E40051E790 /* reportpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reportpageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				5E3A9BE62B8437EC009576EA /* LoginViewController.swift */,
 				5E704AF22B97DCB8002BDD73 /* SignUpViewController.swift */,
 				5E3A9BE82B8437EC009576EA /* Main.storyboard */,
+				F8905D532BC969E40051E790 /* reportpageViewController.swift */,
 				5E09800B2BABE78A008502FE /* SelfTestVC.swift */,
 				5E3A9BEB2B8437F0009576EA /* Assets.xcassets */,
 				5E3A9BED2B8437F0009576EA /* LaunchScreen.storyboard */,
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8905D542BC969E40051E790 /* reportpageViewController.swift in Sources */,
 				5E3A9BE72B8437EC009576EA /* LoginViewController.swift in Sources */,
 				5E3A9BE32B8437EC009576EA /* AppDelegate.swift in Sources */,
 				5E704AF32B97DCB8002BDD73 /* SignUpViewController.swift in Sources */,

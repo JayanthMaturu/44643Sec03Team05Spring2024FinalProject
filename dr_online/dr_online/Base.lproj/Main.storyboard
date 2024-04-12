@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nr4-hw-nfS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nr4-hw-nfS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -297,6 +297,9 @@
                                                     <backgroundConfiguration key="background" image="reports"/>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="Kfw-WV-reS" kind="show" id="VrB-ac-uOn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -333,6 +336,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUn-Fq-gTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2801" y="-2"/>
+        </scene>
+        <!--Report Page-->
+        <scene sceneID="uf7-EZ-XYj">
+            <objects>
+                <viewController id="Kfw-WV-reS" customClass="reportpageViewController" customModule="dr_online" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lH3-WA-dG2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Cwr-jc-UJi" userLabel="BigContainerSV">
+                                <rect key="frame" x="-20" y="155" width="393" height="636.33333333333337"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-GL-bYc">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="581"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ijb-6f-XoX">
+                                                <rect key="frame" x="34" y="60" width="314.33333333333331" height="406.66666666666669"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JJA-16-5zF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="75"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fh7-h4-tRI">
+                                                        <rect key="frame" x="0.0" y="83" width="314.33333333333331" height="75"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48i-kX-Mw8">
+                                                        <rect key="frame" x="0.0" y="166" width="314.33333333333331" height="74.666666666666686"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cs8-Gc-B4n">
+                                                        <rect key="frame" x="0.0" y="248.66666666666663" width="314.33333333333331" height="75"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1VY-6i-y0g">
+                                                        <rect key="frame" x="0.0" y="331.66666666666669" width="314.33333333333331" height="75"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ijb-6f-XoX" firstAttribute="height" secondItem="Tre-GL-bYc" secondAttribute="height" multiplier="0.7" id="MNC-Bz-Koe"/>
+                                            <constraint firstItem="ijb-6f-XoX" firstAttribute="width" secondItem="Tre-GL-bYc" secondAttribute="width" multiplier="0.8" id="iD2-a0-4W6"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="6LZ-qf-y42"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="bhD-r5-rfe"/>
+                                    </scrollView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7V-Gb-VyR">
+                                        <rect key="frame" x="146.66666666666666" y="602" width="100" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Download" cornerStyle="capsule"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jPK-v4-nKZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Report Page" id="ZvI-2n-6np"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="Fh7-h4-tRI" id="Hyi-rv-lFR"/>
+                        <outlet property="diagnosisTextField" destination="Cs8-Gc-B4n" id="0Je-J8-t31"/>
+                        <outlet property="genderTextField" destination="48i-kX-Mw8" id="Fj6-kq-F2J"/>
+                        <outlet property="nameTextField" destination="JJA-16-5zF" id="5hW-lR-J36"/>
+                        <outlet property="prescriptionTextField" destination="1VY-6i-y0g" id="VdO-W3-dG3"/>
+                        <outlet property="scrollView" destination="Tre-GL-bYc" id="fMA-Iw-9xC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jq8-d8-xGl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3852.6717557251909" y="450"/>
         </scene>
         <!--Self Test-->
         <scene sceneID="QWf-LF-ZZz">
