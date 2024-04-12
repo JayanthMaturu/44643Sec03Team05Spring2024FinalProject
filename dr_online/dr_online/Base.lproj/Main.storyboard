@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nr4-hw-nfS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nr4-hw-nfS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -352,7 +352,7 @@
                                         <rect key="frame" x="0.0" y="200" width="353" height="187"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhG-Hg-3la">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="71.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="22.333333333333332"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Predict"/>
                                                 <connections>
@@ -360,8 +360,21 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNM-e5-tFw">
-                                                <rect key="frame" x="0.0" y="79.666666666666686" width="353" height="107.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="30.333333333333314" width="353" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="isp-8G-yM2" userLabel="DiseaseTV">
+                                                <rect key="frame" x="0.0" y="72.333333333333314" width="353" height="56.666666666666657"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lce-Nh-Xs5" userLabel="Diseaselbl">
+                                                <rect key="frame" x="0.0" y="137" width="353" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -410,6 +423,8 @@
                     <navigationItem key="navigationItem" title="Self Test" id="BXa-vx-yPP"/>
                     <connections>
                         <outlet property="diseaseLBL" destination="rNM-e5-tFw" id="9yM-Do-Y5C"/>
+                        <outlet property="diseaseTV" destination="isp-8G-yM2" id="fVQ-Fu-DPZ"/>
+                        <outlet property="diseaselbl" destination="Lce-Nh-Xs5" id="NPm-Fc-pCS"/>
                         <outlet property="outputTV" destination="Mcg-Ac-WU4" id="BBG-Ib-LkV"/>
                         <outlet property="predictBTN" destination="PhG-Hg-3la" id="A62-o1-SwC"/>
                         <outlet property="sympselectScrollV" destination="UId-JV-FJ6" id="epO-HW-sTj"/>

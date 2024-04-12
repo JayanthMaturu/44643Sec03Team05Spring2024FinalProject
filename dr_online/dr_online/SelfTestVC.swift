@@ -6,8 +6,20 @@
 //
 
 import UIKit
+import CoreML
 
 class SelfTestVC: UIViewController, UITextFieldDelegate {
+    
+    
+    
+    @IBOutlet weak var diseaseTV: UITextView!
+    
+    @IBOutlet weak var diseaselbl: UILabel!
+    
+    
+    
+    let model = predictdisease_1()
+    
     
     @IBOutlet weak var sympselectScrollV: UIScrollView!
     @IBOutlet weak var predictBTN: UIButton!
@@ -29,9 +41,34 @@ class SelfTestVC: UIViewController, UITextFieldDelegate {
         "malaise", "blurred_and_distorted_vision"
     ]
     @IBAction func predictACT(_ sender: UIButton) {
-        
-        // ML part implementation
-    }
+        // Get the selected symptoms from the user
+               let selectedSymptoms = outputTV.text.lowercased().split(separator: "\n").map { String($0) }
+               
+               // Perform disease prediction using ML model
+               if let predictedDisease = predictDisease(symptoms: selectedSymptoms) {
+                   // Display the predicted disease
+                   outputTV.text = "Predicted Disease: \(predictedDisease)"
+               } else {
+                   outputTV.text = "Could not predict disease."
+               }
+           }
+           
+           func predictDisease(symptoms: [String]) -> String? {
+               do {
+                   // Prepare input for ML model
+                   let input = predictdisease_1Input( itching: symptoms.contains("itching") ? 1 : 0,
+                                                      skin_rash: symptoms.contains("skin_rash") ? 1 : 0,nodal_skin_eruptions: symptoms.contains("nodal_skin_eruptions") ? 1 : 0, continuous_sneezing: symptoms.contains("continuous_sneezing") ? 1 : 0, shivering: symptoms.contains("shivering") ? 1 : 0,chills: symptoms.contains("chills") ? 1 : 0, joint_pain:symptoms.contains("joint_pain") ? 1 : 0, stomach_pain: symptoms.contains("stomach_pain") ? 1 : 0, acidity:symptoms.contains("acidity") ? 1 : 0, ulcers_on_tongue: symptoms.contains("ulcers_on_tongue") ? 1 : 0, muscle_wasting:symptoms.contains("muscle_wasting") ? 1 : 0, vomiting:symptoms.contains("vomiting") ? 1 : 0, burning_micturition:symptoms.contains("burning_micturition") ? 1 : 0, spotting__urination:symptoms.contains("spotting__urination") ? 1 : 0, fatigue:symptoms.contains("fatigue") ? 1 : 0, weight_gain:symptoms.contains("itching") ? 1 : 0, anxiety:symptoms.contains("itching") ? 1 : 0, cold_hands_and_feets:symptoms.contains("itching") ? 1 : 0, mood_swings:symptoms.contains("itching") ? 1 : 0, weight_loss:symptoms.contains("itching") ? 1 : 0, restlessness: symptoms.contains("itching") ? 1 : 0, lethargy: symptoms.contains("itching") ? 1 : 0, patches_in_throat:symptoms.contains("itching") ? 1 : 0, irregular_sugar_level: symptoms.contains("itching") ? 1 : 0, cough: symptoms.contains("itching") ? 1 : 0, high_fever: symptoms.contains("itching") ? 1 : 0, sunken_eyes: symptoms.contains("itching") ? 1 : 0, breathlessness: symptoms.contains("itching") ? 1 : 0, sweating: symptoms.contains("itching") ? 1 : 0, dehydration: symptoms.contains("itching") ? 1 : 0, indigestion: symptoms.contains("itching") ? 1 : 0, headache: symptoms.contains("itching") ? 1 : 0, yellowish_skin: symptoms.contains("itching") ? 1 : 0, dark_urine: symptoms.contains("itching") ? 1 : 0, nausea: symptoms.contains("itching") ? 1 : 0, loss_of_appetite:  symptoms.contains("itching") ? 1 : 0, pain_behind_the_eyes: symptoms.contains("itching") ? 1 : 0, back_pain: symptoms.contains("itching") ? 1 : 0, constipation: symptoms.contains("itching") ? 1 : 0, abdominal_pain:symptoms.contains("itching") ? 1 : 0, diarrhoea: symptoms.contains("itching") ? 1 : 0, mild_fever: symptoms.contains("itching") ? 1 : 0, yellow_urine: symptoms.contains("itching") ? 1 : 0, yellowing_of_eyes: symptoms.contains("itching") ? 1 : 0, acute_liver_failure: symptoms.contains("itching") ? 1 : 0, fluid_overload:symptoms.contains("itching") ? 1 : 0, swelling_of_stomach:symptoms.contains("itching") ? 1 : 0, swelled_lymph_nodes: symptoms.contains("itching") ? 1 : 0, malaise:symptoms.contains("malaise") ? 1 : 0, blurred_and_distorted_vision: symptoms.contains("blurred_and_distorted_vision") ? 1 : 0)
+                   
+                   
+                   let prediction = try model.prediction(input: input)
+                   
+                   
+                   return prediction.prognosis
+               } catch {
+                   print("Error: \(error)")
+                   return nil
+               }
+           }
     
     override func viewDidLoad() {
         super.viewDidLoad()
