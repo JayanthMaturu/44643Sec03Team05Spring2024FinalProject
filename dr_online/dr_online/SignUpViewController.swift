@@ -8,6 +8,8 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import AnimatedGradientView
+
 
 class SignUpViewController: UIViewController {
     
@@ -68,7 +70,7 @@ class SignUpViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.applygradient()
         // Do any additional setup after loading the view.
     }
     
@@ -104,18 +106,18 @@ class SignUpViewController: UIViewController {
         }
         return true
     }
-        func isValidGmailAddress(email: String) -> Bool {
-            let pattern = "^[A-Z0-9._%+-]+@gmail\\.com$"
-            let regex = try! NSRegularExpression(pattern: pattern, options: [.caseInsensitive])
-            return regex.firstMatch(in: email, options: [], range: NSRange(location: 0, length: email.utf16.count)) != nil
-        }
+    func isValidGmailAddress(email: String) -> Bool {
+        let pattern = "^[A-Z0-9._%+-]+@gmail\\.com$"
+        let regex = try! NSRegularExpression(pattern: pattern, options: [.caseInsensitive])
+        return regex.firstMatch(in: email, options: [], range: NSRange(location: 0, length: email.utf16.count)) != nil
+    }
+    
+    func isValidPassword(_ password: String) -> Bool {
+        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~])[A-Za-z\\d#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{8,}$"
         
-        func isValidPassword(_ password: String) -> Bool {
-            let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~])[A-Za-z\\d#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{8,}$"
-            
-            let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
-            return passwordTest.evaluate(with: password)
-        }
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        return passwordTest.evaluate(with: password)
+    }
     private func alert(message : String){
         let alert = UIAlertController(title: "Password", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default){ (action) in
@@ -123,4 +125,17 @@ class SignUpViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    private func applygradient(){
+        let gradientType: CAGradientLayerType = .axial
+        let direction: AnimatedGradientViewDirection = .down
+        let animatedGradient = AnimatedGradientView(frame: self.view.bounds)
+        animatedGradient.animationValues = [
+            (colors: ["#F3DCBE","cc2b5e"],direction,gradientType),
+                        (colors: ["#F3D2D6","bdc3c7"],direction,gradientType),
+                        (colors: ["de6262","dd5e89"],direction,gradientType),
+                        (colors: ["#E9F3F2","2193b0"],direction,gradientType),
+        ]
+        self.view.insertSubview(animatedGradient, at:0)
+    }
+
 }

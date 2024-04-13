@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreML
+import AnimatedGradientView
 
 class SelfTestVC: UIViewController, UITextFieldDelegate {
     
@@ -73,6 +74,7 @@ class SelfTestVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addSymptomLabels()
+        self.applygradient()
     }
     func addSymptomLabels() {
         var previousLabelMaxY: CGFloat = 0
@@ -103,5 +105,17 @@ class SelfTestVC: UIViewController, UITextFieldDelegate {
         label.numberOfLines = 0 // Allow label to wrap text
         label.sizeToFit() // Adjust label size to fit content within frame
         return label
+    }
+    private func applygradient(){
+        let gradientType: CAGradientLayerType = .axial
+        let direction: AnimatedGradientViewDirection = .down
+        let animatedGradient = AnimatedGradientView(frame: self.view.bounds)
+        animatedGradient.animationValues = [
+            (colors: ["#F3DCBE","cc2b5e"],direction,gradientType),
+                        (colors: ["#F3D2D6","bdc3c7"],direction,gradientType),
+                        (colors: ["de6262","dd5e89"],direction,gradientType),
+                        (colors: ["#E9F3F2","2193b0"],direction,gradientType),
+        ]
+        self.view.insertSubview(animatedGradient, at:0)
     }
 }

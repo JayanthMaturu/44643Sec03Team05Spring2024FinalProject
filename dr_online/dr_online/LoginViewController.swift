@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 import FirebaseAuth
+import AnimatedGradientView
 
 class LoginViewController: UIViewController {
 
@@ -57,7 +58,7 @@ class LoginViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.applygradient()// Do any additional setup after loading the view.
     }
     
     private func alert(message : String){
@@ -65,6 +66,18 @@ class LoginViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default){ (action) in
         })
         present(alert, animated: true, completion: nil)
+    }
+    private func applygradient(){
+        let gradientType: CAGradientLayerType = .axial
+        let direction: AnimatedGradientViewDirection = .down
+        let animatedGradient = AnimatedGradientView(frame: self.view.bounds)
+        animatedGradient.animationValues = [
+            (colors: ["#F3DCBE","cc2b5e"],direction,gradientType),
+                        (colors: ["#F3D2D6","bdc3c7"],direction,gradientType),
+                        (colors: ["de6262","dd5e89"],direction,gradientType),
+                        (colors: ["#E9F3F2","2193b0"],direction,gradientType),
+        ]
+        self.view.insertSubview(animatedGradient, at:0)
     }
 
 

@@ -352,7 +352,7 @@
                                         <rect key="frame" x="0.0" y="200" width="353" height="187"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhG-Hg-3la">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="22.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="11.666666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Predict"/>
                                                 <connections>
@@ -360,13 +360,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNM-e5-tFw">
-                                                <rect key="frame" x="0.0" y="30.333333333333314" width="353" height="34"/>
+                                                <rect key="frame" x="0.0" y="19.666666666666686" width="353" height="17.666666666666671"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="isp-8G-yM2" userLabel="DiseaseTV">
-                                                <rect key="frame" x="0.0" y="72.333333333333314" width="353" height="56.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="45.333333333333321" width="353" height="83.666666666666686"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -458,7 +458,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="H3R-Wt-v0l"/>
+        <segue reference="3hI-xy-dRb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="DoctorOnline" width="433.33334350585938" height="346.66665649414062"/>
