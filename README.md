@@ -4,6 +4,7 @@ We are planning to develop Dr. Online app. This app brings the user to  make Doc
 The main target users of our app are Patients ,Doctors.
 
 The features that we  would like to implement is to predict the diseases based on the user entered symptoms. User can see doctor list  based on disease  through online which makes very user-friendly interface .
+The user can use reports functionality which is to be implemented to see the reports of the user. The user will be able to download the report in .PDF format.
 
 Everyone started Working on individual task collected dataset for diseases prediction using symptoms list. choosen logo for project.
 
