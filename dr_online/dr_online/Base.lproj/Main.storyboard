@@ -351,8 +351,12 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-GL-bYc">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="581"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBA-yZ-up2">
+                                                <rect key="frame" x="71" y="430" width="240" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ijb-6f-XoX">
-                                                <rect key="frame" x="34" y="60" width="314.33333333333331" height="406.66666666666669"/>
+                                                <rect key="frame" x="34" y="60.000000000000028" width="314.33333333333331" height="406.66666666666674"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JJA-16-5zF">
                                                         <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="75"/>
