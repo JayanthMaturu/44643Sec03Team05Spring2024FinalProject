@@ -337,6 +337,9 @@
                                                     <backgroundConfiguration key="background" image="reports"/>
                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="BnN-b5-8HJ" kind="show" identifier="toreports" id="3eo-2I-zpL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -368,6 +371,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUn-Fq-gTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2801" y="-2"/>
+        </scene>
+        <!--ReportsVC-->
+        <scene sceneID="iVT-T0-dF6">
+            <objects>
+                <viewController id="BnN-b5-8HJ" customClass="ReportsVC" customModule="dr_online" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FTc-Na-S5N">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lrL-rI-4jU" userLabel="BigContainerSV">
+                                <rect key="frame" x="20" y="175" width="353" height="623"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q45-bC-x5c">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="623"/>
+                                    </scrollView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tcl-kO-Po2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lrL-rI-4jU" firstAttribute="leading" secondItem="tcl-kO-Po2" secondAttribute="leading" constant="20" id="Cck-Mj-oBw"/>
+                            <constraint firstItem="tcl-kO-Po2" firstAttribute="bottom" secondItem="lrL-rI-4jU" secondAttribute="bottom" constant="20" id="j2D-fC-Em5"/>
+                            <constraint firstItem="tcl-kO-Po2" firstAttribute="trailing" secondItem="lrL-rI-4jU" secondAttribute="trailing" constant="20" id="k3G-Hu-bww"/>
+                            <constraint firstItem="lrL-rI-4jU" firstAttribute="top" secondItem="tcl-kO-Po2" secondAttribute="top" constant="20" id="skj-pC-aUc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9SQ-lr-AgS">
+                        <barButtonItem key="rightBarButtonItem" title="Print" id="jZs-JI-tER">
+                            <connections>
+                                <action selector="printAction:" destination="BnN-b5-8HJ" id="6PG-QV-6gy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="printBTN" destination="jZs-JI-tER" id="K3Q-kk-wd8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9fa-4H-F3Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3817" y="388"/>
         </scene>
         <!--Self Test-->
         <scene sceneID="QWf-LF-ZZz">
@@ -479,7 +523,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="H3R-Wt-v0l"/>
+        <segue reference="3hI-xy-dRb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="DoctorOnline" width="559" height="447"/>

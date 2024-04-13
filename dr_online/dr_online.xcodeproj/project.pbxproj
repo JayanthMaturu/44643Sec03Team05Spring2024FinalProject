@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5E09800C2BABE78A008502FE /* SelfTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09800B2BABE78A008502FE /* SelfTestVC.swift */; };
 		5E19D7472BA9F81700BEF110 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19D7462BA9F81700BEF110 /* HomeScreenVC.swift */; };
+		5E283FB02BC9D0FD00D5FC5D /* ReportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E283FAF2BC9D0FD00D5FC5D /* ReportsVC.swift */; };
 		5E3A9BE32B8437EC009576EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE22B8437EC009576EA /* AppDelegate.swift */; };
 		5E3A9BE52B8437EC009576EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE42B8437EC009576EA /* SceneDelegate.swift */; };
 		5E3A9BE72B8437EC009576EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE62B8437EC009576EA /* LoginViewController.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		5E09800B2BABE78A008502FE /* SelfTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfTestVC.swift; sourceTree = "<group>"; };
 		5E19D7462BA9F81700BEF110 /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
+		5E283FAF2BC9D0FD00D5FC5D /* ReportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsVC.swift; sourceTree = "<group>"; };
 		5E3A9BDF2B8437EC009576EA /* dr_online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dr_online.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E3A9BE22B8437EC009576EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E3A9BE42B8437EC009576EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				5E3A9BE62B8437EC009576EA /* LoginViewController.swift */,
 				5E704AF22B97DCB8002BDD73 /* SignUpViewController.swift */,
 				5E3A9BE82B8437EC009576EA /* Main.storyboard */,
+				5E283FAF2BC9D0FD00D5FC5D /* ReportsVC.swift */,
 				5E09800B2BABE78A008502FE /* SelfTestVC.swift */,
 				5E3A9BEB2B8437F0009576EA /* Assets.xcassets */,
 				5E3A9BED2B8437F0009576EA /* LaunchScreen.storyboard */,
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E3A9BE72B8437EC009576EA /* LoginViewController.swift in Sources */,
+				5E283FB02BC9D0FD00D5FC5D /* ReportsVC.swift in Sources */,
 				5E3A9BE32B8437EC009576EA /* AppDelegate.swift in Sources */,
 				5E704AF32B97DCB8002BDD73 /* SignUpViewController.swift in Sources */,
 				5E19D7472BA9F81700BEF110 /* HomeScreenVC.swift in Sources */,
