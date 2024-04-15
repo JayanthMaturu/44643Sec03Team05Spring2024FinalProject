@@ -375,7 +375,7 @@
         <!--ReportsVC-->
         <scene sceneID="iVT-T0-dF6">
             <objects>
-                <viewController id="BnN-b5-8HJ" customClass="ReportsVC" customModule="dr_online" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BnN-b5-8HJ" customClass="ReportsVC" customModule="dr_online" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FTc-Na-S5N">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -421,79 +421,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gd5-PU-QLS" userLabel="BigContainerSV">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4yY-eh-qMA" userLabel="BigContainerSV">
                                 <rect key="frame" x="20" y="175" width="353" height="623"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mnC-ce-MRe" userLabel="inputSV">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="288"/>
-                                        <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UId-JV-FJ6" userLabel="sympselectScrollV">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="200"/>
-                                            </scrollView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cee-4Y-cPx" userLabel="PredictSV">
-                                                <rect key="frame" x="0.0" y="208" width="353" height="80"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhG-Hg-3la">
-                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="36"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Predict"/>
-                                                        <connections>
-                                                            <action selector="predictACT:" destination="wOJ-iE-17v" eventType="touchDragInside" id="U0o-pV-Aot"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predicted Disease: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNM-e5-tFw">
-                                                        <rect key="frame" x="0.0" y="44" width="353" height="36"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0ad-yX-Tbe">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="565"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayh-sE-knu">
+                                        <rect key="frame" x="0.0" y="573" width="353" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="cee-4Y-cPx" firstAttribute="height" secondItem="UId-JV-FJ6" secondAttribute="height" multiplier="0.4" id="8Wf-VN-X5M"/>
+                                            <constraint firstAttribute="height" constant="50" id="6UM-qN-mmf"/>
                                         </constraints>
-                                    </stackView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdh-1h-Reu">
-                                        <rect key="frame" x="0.0" y="296" width="353" height="327"/>
-                                        <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Selected Symptoms are:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcg-Ac-WU4">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="327"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="Mcg-Ac-WU4" firstAttribute="centerY" secondItem="hdh-1h-Reu" secondAttribute="centerY" id="6oZ-dI-s8s"/>
-                                            <constraint firstItem="Mcg-Ac-WU4" firstAttribute="leading" secondItem="hdh-1h-Reu" secondAttribute="leading" id="CJk-vB-8kU"/>
-                                            <constraint firstItem="Mcg-Ac-WU4" firstAttribute="top" secondItem="hdh-1h-Reu" secondAttribute="top" id="CmG-AR-fFp"/>
-                                            <constraint firstItem="Mcg-Ac-WU4" firstAttribute="centerX" secondItem="hdh-1h-Reu" secondAttribute="centerX" id="H5s-QV-Ebh"/>
-                                            <constraint firstAttribute="bottom" secondItem="Mcg-Ac-WU4" secondAttribute="bottom" id="XaG-12-Elw"/>
-                                            <constraint firstAttribute="trailing" secondItem="Mcg-Ac-WU4" secondAttribute="trailing" id="oBe-sj-Vyj"/>
-                                        </constraints>
-                                    </scrollView>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Predict"/>
+                                        <connections>
+                                            <action selector="onPredict:" destination="wOJ-iE-17v" eventType="touchUpInside" id="dn1-7c-GJ0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sk6-5l-bii"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sk6-5l-bii" firstAttribute="trailing" secondItem="gd5-PU-QLS" secondAttribute="trailing" constant="20" id="84f-8I-1q8"/>
-                            <constraint firstItem="gd5-PU-QLS" firstAttribute="leading" secondItem="sk6-5l-bii" secondAttribute="leading" constant="20" id="J15-St-E3f"/>
-                            <constraint firstItem="gd5-PU-QLS" firstAttribute="top" secondItem="sk6-5l-bii" secondAttribute="top" constant="20" id="j0d-dq-tKF"/>
-                            <constraint firstItem="sk6-5l-bii" firstAttribute="bottom" secondItem="gd5-PU-QLS" secondAttribute="bottom" constant="20" id="qfz-Ww-zuz"/>
+                            <constraint firstItem="4yY-eh-qMA" firstAttribute="top" secondItem="sk6-5l-bii" secondAttribute="top" constant="20" id="1iA-BN-MiC"/>
+                            <constraint firstItem="sk6-5l-bii" firstAttribute="trailing" secondItem="4yY-eh-qMA" secondAttribute="trailing" constant="20" id="3oi-bW-e6l"/>
+                            <constraint firstItem="sk6-5l-bii" firstAttribute="bottom" secondItem="4yY-eh-qMA" secondAttribute="bottom" constant="20" id="LrQ-bi-aa0"/>
+                            <constraint firstItem="4yY-eh-qMA" firstAttribute="leading" secondItem="sk6-5l-bii" secondAttribute="leading" constant="20" id="UVh-wb-AbS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Self Test" id="BXa-vx-yPP"/>
                     <connections>
-                        <outlet property="diseaseLBL" destination="rNM-e5-tFw" id="9yM-Do-Y5C"/>
-                        <outlet property="outputTV" destination="Mcg-Ac-WU4" id="BBG-Ib-LkV"/>
-                        <outlet property="predictBTN" destination="PhG-Hg-3la" id="A62-o1-SwC"/>
-                        <outlet property="sympselectScrollV" destination="UId-JV-FJ6" id="epO-HW-sTj"/>
-                        <outlet property="symptomsScrollV" destination="hdh-1h-Reu" id="6DU-WH-MN9"/>
+                        <outlet property="tableView" destination="0ad-yX-Tbe" id="9LO-hz-4Fv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4E-bn-WaZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

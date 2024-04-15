@@ -16,6 +16,7 @@
 		5E3A9BEA2B8437EC009576EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE82B8437EC009576EA /* Main.storyboard */; };
 		5E3A9BEC2B8437F0009576EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E3A9BEB2B8437F0009576EA /* Assets.xcassets */; };
 		5E3A9BEF2B8437F0009576EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3A9BED2B8437F0009576EA /* LaunchScreen.storyboard */; };
+		5E4076AC2BCDBC7D000437C7 /* DoctorTest.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5E4076AB2BCDBC7C000437C7 /* DoctorTest.mlmodel */; };
 		5E704AF32B97DCB8002BDD73 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E704AF22B97DCB8002BDD73 /* SignUpViewController.swift */; };
 		5EB051192B90395500F34C0F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 5EB051182B90395500F34C0F /* Lottie */; };
 		5EB254DD2B96C12600194E2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EB254DC2B96C12600194E2D /* GoogleService-Info.plist */; };
@@ -60,6 +61,8 @@
 		5E3A9BEB2B8437F0009576EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E3A9BEE2B8437F0009576EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E3A9BF02B8437F0009576EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E4076A82BCDBB85000437C7 /* DatasetSpecialistAssignment.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = DatasetSpecialistAssignment.csv; sourceTree = "<group>"; };
+		5E4076AB2BCDBC7C000437C7 /* DoctorTest.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DoctorTest.mlmodel; sourceTree = "<group>"; };
 		5E704AF22B97DCB8002BDD73 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5EB254DC2B96C12600194E2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +125,7 @@
 		5E3A9BE12B8437EC009576EA /* dr_online */ = {
 			isa = PBXGroup;
 			children = (
+				5E4076AA2BCDBB85000437C7 /* CleanedDataset */,
 				5E3A9BF72B8438A9009576EA /* SupportingFiles */,
 				5E3A9BE62B8437EC009576EA /* LoginViewController.swift */,
 				5E704AF22B97DCB8002BDD73 /* SignUpViewController.swift */,
@@ -144,6 +148,15 @@
 				5E3A9BE42B8437EC009576EA /* SceneDelegate.swift */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		5E4076AA2BCDBB85000437C7 /* CleanedDataset */ = {
+			isa = PBXGroup;
+			children = (
+				5E4076AB2BCDBC7C000437C7 /* DoctorTest.mlmodel */,
+				5E4076A82BCDBB85000437C7 /* DatasetSpecialistAssignment.csv */,
+			);
+			path = CleanedDataset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +270,7 @@
 				5E3A9BE32B8437EC009576EA /* AppDelegate.swift in Sources */,
 				5E704AF32B97DCB8002BDD73 /* SignUpViewController.swift in Sources */,
 				5E19D7472BA9F81700BEF110 /* HomeScreenVC.swift in Sources */,
+				5E4076AC2BCDBC7D000437C7 /* DoctorTest.mlmodel in Sources */,
 				5E09800C2BABE78A008502FE /* SelfTestVC.swift in Sources */,
 				5E3A9BE52B8437EC009576EA /* SceneDelegate.swift in Sources */,
 			);

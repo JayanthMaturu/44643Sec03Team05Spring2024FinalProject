@@ -6,65 +6,191 @@
 //
 
 import UIKit
+import AudioToolbox
+import CoreML
 
-class SelfTestVC: UIViewController, UITextFieldDelegate {
+class SelfTestVC: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
-    @IBOutlet weak var sympselectScrollV: UIScrollView!
-    @IBOutlet weak var predictBTN: UIButton!
-    @IBOutlet weak var diseaseLBL: UILabel!
-    @IBOutlet weak var symptomsScrollV: UIScrollView!
-    @IBOutlet weak var outputTV: UITextView!
-    var selectedsymptoms : [String] = []
-    let symptomsArray = [
-        "itching", "skin_rash", "nodal_skin_eruptions", "continuous_sneezing", "shivering",
-        "chills", "joint_pain", "stomach_pain", "acidity", "ulcers_on_tongue",
-        "muscle_wasting", "vomiting", "burning_micturition", "spotting_ urination", "fatigue",
-        "weight_gain", "anxiety", "cold_hands_and_feets", "mood_swings", "weight_loss",
-        "restlessness", "lethargy", "patches_in_throat", "irregular_sugar_level", "cough",
-        "high_fever", "sunken_eyes", "breathlessness", "sweating", "dehydration",
-        "indigestion", "headache", "yellowish_skin", "dark_urine", "nausea",
-        "loss_of_appetite", "pain_behind_the_eyes", "back_pain", "constipation",
-        "abdominal_pain", "diarrhoea", "mild_fever", "yellow_urine", "yellowing_of_eyes",
-        "acute_liver_failure", "fluid_overload", "swelling_of_stomach", "swelled_lymph_nodes",
-        "malaise", "blurred_and_distorted_vision"
-    ]
-    @IBAction func predictACT(_ sender: UIButton) {
-        
-        // ML part implementation
-    }
+    let doctorModel = try? DoctorTest(configuration: MLModelConfiguration())
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var selectedSymptoms: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.addSymptomLabels()
-    }
-    func addSymptomLabels() {
-        var previousLabelMaxY: CGFloat = 0
-        
-        for symptom in symptomsArray {
-            let label = createLabel(withText: symptom)
-            let labelOriginY = previousLabelMaxY + 10
-            label.frame = CGRect(x: 10, y: labelOriginY, width: sympselectScrollV.frame.width - 20, height: label.frame.height)
-            let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(labelDoubleTapped))
-            doubleTapGesture.numberOfTapsRequired = 2
-            label.isUserInteractionEnabled = true
-            label.addGestureRecognizer(doubleTapGesture)
-            sympselectScrollV.addSubview(label)
-            previousLabelMaxY = label.frame.maxY
-        }
-        sympselectScrollV.contentSize = CGSize(width: sympselectScrollV.frame.width, height: previousLabelMaxY + 10)
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
-    @objc func labelDoubleTapped(sender: UITapGestureRecognizer) {
-        guard let labelsent = sender.view as? UILabel, let text = labelsent.text else { return }
-        outputTV.text = outputTV.text + "\n" + text
-
-        labelsent.removeFromSuperview()
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return symptomsArray.count
     }
-    func createLabel(withText text: String) -> UILabel {
-        let label = UILabel()
-        label.text = text
-        label.numberOfLines = 0 // Allow label to wrap text
-        label.sizeToFit() // Adjust label size to fit content within frame
-        return label
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+        let symptom = symptomsArray[indexPath.row]
+        cell.textLabel?.text = "\(symptom) \(selectedSymptoms.contains(symptom) ? "☑️" : "☐")"
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedSymptom = symptomsArray[indexPath.row]
+        if let index = selectedSymptoms.firstIndex(of: selectedSymptom) {
+            selectedSymptoms.remove(at: index)
+        } else {
+            selectedSymptoms.append(selectedSymptom)
+        }
+        tableView.reloadData()
+    }
+    
+    
+    @IBAction func onPredict(_ sender: Any) {
+        
+        if selectedSymptoms.isEmpty {
+            
+            let alert = UIAlertController(title: "No Disease Selected", message: "Please select at least one symptom before predicting.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            
+            recordForDoctorPredict()
+        }
+        
+    }
+    
+    func recordForDoctorPredict() {
+        var symptomValues: [String: Int64] = [:]
+        for symptom in symptomsArray {
+            symptomValues[symptom] = selectedSymptoms.contains(symptom) ? 1 : 0
+        }
+        
+        let prediction = try! doctorModel?.prediction(
+            itching: symptomValues["itching"] ?? 0,
+            skin_rash: symptomValues["skin_rash"] ?? 0,
+            nodal_skin_eruptions: symptomValues["nodal_skin_eruptions"] ?? 0,
+            dischromic__patches: symptomValues["dischromic__patches"] ?? 0,
+            continuous_sneezing: symptomValues["continuous_sneezing"] ?? 0,
+            stomach_pain: symptomValues["stomach_pain"] ?? 0,
+            acidity: symptomValues["acidity"] ?? 0,
+            ulcers_on_tongue: symptomValues["ulcers_on_tongue"] ?? 0,
+            vomiting: symptomValues["vomiting"] ?? 0,
+            cough: symptomValues["cough"] ?? 0,
+            chest_pain: symptomValues["chest_pain"] ?? 0,
+            high_fever: symptomValues["high_fever"] ?? 0,
+            headache: symptomValues["headache"] ?? 0,
+            back_pain: symptomValues["back_pain"] ?? 0,
+            neck_pain: symptomValues["neck_pain"] ?? 0,
+            muscle_pain: symptomValues["muscle_pain"] ?? 0,
+            mild_fever: symptomValues["mild_fever"] ?? 0,
+            joint_pain: symptomValues["joint_pain"] ?? 0,
+            belly_pain: symptomValues["belly_pain"] ?? 0,
+            stomach_bleeding: symptomValues["stomach_bleeding"] ?? 0,
+            knee_pain: symptomValues["knee_pain"] ?? 0
+        )
+        
+        
+        let predictedDisease = prediction!.Disease
+        let result = getSpecialtyName(for: (Int(predictedDisease)))
+        
+        
+        
+        
+        // Show prediction result
+        let alert = UIAlertController(title: "Prediction Result", message: "The predicted disease is \(result)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        // Play sound
+        AudioServicesPlaySystemSound(1152)
+    }
+    
+    
+    
+    func studentPredicationAlert(with prediction: String) {
+        let titleAlert = "Preliminary Prediction"
+        let message = "Admit Status: \(prediction)"
+        
+        let controller = UIAlertController(title: titleAlert, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        controller.addAction(okAction)
+        
+        present(controller, animated: true, completion: nil)
+    }
+    
+}
+
+
+
+func getSpecialtyName(for code: Int) -> String {
+    switch code {
+    case 1:
+        return "Rheumatologist"
+    case 2:
+        return "Pulmonologist"
+    case 3:
+        return "Phlebologist"
+    case 4:
+        return "Pediatrician"
+    case 5:
+        return "Otolaryngologist"
+    case 6:
+        return "Osteopathic"
+    case 7:
+        return "Osteoarthritis"
+    case 8:
+        return "Neurologist"
+    case 9:
+        return "Internal Medicine"
+    case 10:
+        return "Hepatologist"
+    case 11:
+        return "Gynecologist"
+    case 12:
+        return "Gastroenterologist"
+    case 13:
+        return "Endocrinologist"
+    case 14:
+        return "Dermatologist"
+    case 15:
+        return "Common Cold"
+    case 16:
+        return "Cardiologist"
+    case 17:
+        return "Allergist"
+    default:
+        return "Unknown Specialty"
     }
 }
+
+
+
+
+
+
+let symptomsArray = [
+    "itching",
+    "skin_rash",
+    "nodal_skin_eruptions",
+    "dischromic_patches",
+    "continuous_sneezing",
+    "stomach_pain",
+    "acidity",
+    "ulcers_on_tongue",
+    "vomiting",
+    "cough",
+    "chest_pain",
+    "high_fever",
+    "headache",
+    "back_pain",
+    "neck_pain",
+    "muscle_pain",
+    "mild_fever",
+    "joint_pain",
+    "belly_pain",
+    "stomach_bleeding",
+    "knee_pain",
+    ]
+
