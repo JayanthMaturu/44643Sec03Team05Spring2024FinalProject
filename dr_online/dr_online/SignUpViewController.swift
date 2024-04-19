@@ -49,7 +49,12 @@ class SignUpViewController: UIViewController {
                 - At least one number
                 - At least one special character
                 """
-            alert(message: message)
+            let alert = UIAlertController(title: "Password", message: message, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            }
+            
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
             passwordTF.text = ""
             return
         }
@@ -62,7 +67,7 @@ class SignUpViewController: UIViewController {
         
         let isUserCreated = self.signUpUser(email: email, password: password, name: name, age: age, gender: genderSC.selectedSegmentIndex == 0 ? "Male" : "Female", phoneNumber: phone)
         if (isUserCreated){
-            alert(message: "User Created Successfully")
+            alert(message: "User Created Successfully", title: "User")
             performSegue(withIdentifier: "homescreensegue", sender: nil)
         }
     }
@@ -118,8 +123,8 @@ class SignUpViewController: UIViewController {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
         return passwordTest.evaluate(with: password)
     }
-    private func alert(message : String){
-        let alert = UIAlertController(title: "Password", message: message, preferredStyle: .alert)
+    private func alert(message : String , title : String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
             // Perform your action here
             self.performSegue(withIdentifier: "homescreensegue", sender: nil)
