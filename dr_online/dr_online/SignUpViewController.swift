@@ -91,6 +91,7 @@ class SignUpViewController: UIViewController {
                     "name": name,
                     "age": age,
                     "gender": gender,
+                    "email": email,
                     "phoneNumber": phoneNumber
                 ]) { error in
                     if let error = error {
@@ -100,6 +101,7 @@ class SignUpViewController: UIViewController {
                     }
                 }
                 print("User signed up: \(user.email ?? "")")
+                DefaultHelper.shared.saveData(name: "", email: email, mobile: "", dob: "")
             }
         }
         return true
@@ -118,8 +120,12 @@ class SignUpViewController: UIViewController {
         }
     private func alert(message : String){
         let alert = UIAlertController(title: "Password", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default){ (action) in
-        })
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                    // Perform your action here
+            self.performSegue(withIdentifier: "homescreensegue", sender: nil)
+                }
+                
+        alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
     

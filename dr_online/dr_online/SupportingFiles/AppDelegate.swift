@@ -13,9 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
+    
+    var dataManager = DataManager()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+
+        
+        DataManager().loadDoctors { result in
+             doctors = result ?? []
+         
+        }
+        
+        
         return true
     }
 

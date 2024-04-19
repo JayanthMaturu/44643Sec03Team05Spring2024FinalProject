@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 import FirebaseAuth
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -26,14 +27,28 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        
+       
+    }
+
     @IBAction func loginbutton(_ sender: Any) {
         guard let email = emailTF.text, let password = passwordTF.text else { return }
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-            guard let strongSelf = self else { return }
+        
+            //guard let strongSelf = self else { return }
             if error != nil {
                 self?.alert(message: "Invalid Username/ Password. Try Again")
             } else {
                 print("reached here")
+                
+              
+                if let user = authResult?.user {
+                                DefaultHelper.shared.saveUID(uid: user.uid)
+                }
+                DefaultHelper.shared.saveData(name: "", email: email, mobile: "", dob: "")
                 self?.performSegue(withIdentifier: "homescreensegue", sender: nil)
             }
         }
@@ -48,7 +63,7 @@ class LoginViewController: UIViewController {
                 Auth.auth().sendPasswordReset(withEmail: email) { error in
                     if let error = error {
                         // Handle password reset error
-                        print("Password reset error: \(error.localizedDescription)")
+                        self.alert(message: "Password reset error: \(error.localizedDescription)")
                     } else {
                         // Password reset email sent successfully
                         self.alert(message: "Password reset email sent successfully")

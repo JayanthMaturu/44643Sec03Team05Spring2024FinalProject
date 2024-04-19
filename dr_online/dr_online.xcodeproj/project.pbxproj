@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		265551882BC8FF3600213F00 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265551872BC8FF3600213F00 /* APIModel.swift */; };
+		2655518B2BC8FF7200213F00 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2655518A2BC8FF7200213F00 /* Alamofire */; };
+		2655518D2BC8FF7200213F00 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2655518C2BC8FF7200213F00 /* AlamofireDynamic */; };
+		3E58A2132BD02A10002E1610 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E58A2122BD02A10002E1610 /* ProfileVC.swift */; };
+		3E58A2152BD02ACF002E1610 /* DefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E58A2142BD02ACF002E1610 /* DefaultHelper.swift */; };
+		3EBBF6962BCD9048002289BF /* DatasetSpecialistAssignment.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3EBBF6952BCD9048002289BF /* DatasetSpecialistAssignment.csv */; };
+		3EBBF6982BCDA012002289BF /* DoctorTest.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3EBBF6972BCDA012002289BF /* DoctorTest.mlmodel */; };
+		3EBBF69A2BCDBB4F002289BF /* DoctorListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBBF6992BCDBB4F002289BF /* DoctorListVC.swift */; };
 		5E09800C2BABE78A008502FE /* SelfTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09800B2BABE78A008502FE /* SelfTestVC.swift */; };
 		5E19D7472BA9F81700BEF110 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E19D7462BA9F81700BEF110 /* HomeScreenVC.swift */; };
-		5E283FB02BC9D0FD00D5FC5D /* ReportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E283FAF2BC9D0FD00D5FC5D /* ReportsVC.swift */; };
 		5E3A9BE32B8437EC009576EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE22B8437EC009576EA /* AppDelegate.swift */; };
 		5E3A9BE52B8437EC009576EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE42B8437EC009576EA /* SceneDelegate.swift */; };
 		5E3A9BE72B8437EC009576EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE62B8437EC009576EA /* LoginViewController.swift */; };
 		5E3A9BEA2B8437EC009576EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3A9BE82B8437EC009576EA /* Main.storyboard */; };
 		5E3A9BEC2B8437F0009576EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E3A9BEB2B8437F0009576EA /* Assets.xcassets */; };
 		5E3A9BEF2B8437F0009576EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3A9BED2B8437F0009576EA /* LaunchScreen.storyboard */; };
-		5E4076AC2BCDBC7D000437C7 /* DoctorTest.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5E4076AB2BCDBC7C000437C7 /* DoctorTest.mlmodel */; };
 		5E704AF32B97DCB8002BDD73 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E704AF22B97DCB8002BDD73 /* SignUpViewController.swift */; };
 		5EB051192B90395500F34C0F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 5EB051182B90395500F34C0F /* Lottie */; };
 		5EB254DD2B96C12600194E2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EB254DC2B96C12600194E2D /* GoogleService-Info.plist */; };
@@ -50,9 +56,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		265551872BC8FF3600213F00 /* APIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		3E58A2122BD02A10002E1610 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		3E58A2142BD02ACF002E1610 /* DefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHelper.swift; sourceTree = "<group>"; };
+		3EBBF6952BCD9048002289BF /* DatasetSpecialistAssignment.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DatasetSpecialistAssignment.csv; sourceTree = "<group>"; };
+		3EBBF6972BCDA012002289BF /* DoctorTest.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DoctorTest.mlmodel; sourceTree = "<group>"; };
+		3EBBF6992BCDBB4F002289BF /* DoctorListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListVC.swift; sourceTree = "<group>"; };
 		5E09800B2BABE78A008502FE /* SelfTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfTestVC.swift; sourceTree = "<group>"; };
 		5E19D7462BA9F81700BEF110 /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
-		5E283FAF2BC9D0FD00D5FC5D /* ReportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsVC.swift; sourceTree = "<group>"; };
 		5E3A9BDF2B8437EC009576EA /* dr_online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dr_online.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E3A9BE22B8437EC009576EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E3A9BE42B8437EC009576EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +72,6 @@
 		5E3A9BEB2B8437F0009576EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E3A9BEE2B8437F0009576EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E3A9BF02B8437F0009576EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E4076A82BCDBB85000437C7 /* DatasetSpecialistAssignment.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = DatasetSpecialistAssignment.csv; sourceTree = "<group>"; };
-		5E4076AB2BCDBC7C000437C7 /* DoctorTest.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DoctorTest.mlmodel; sourceTree = "<group>"; };
 		5E704AF22B97DCB8002BDD73 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5EB254DC2B96C12600194E2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +88,7 @@
 				5EB254EA2B96C1BE00194E2D /* FirebaseAppDistribution-Beta in Frameworks */,
 				5EB254EE2B96C1BE00194E2D /* FirebaseAuthCombine-Community in Frameworks */,
 				5EB254FA2B96C1BE00194E2D /* FirebaseFirestoreCombine-Community in Frameworks */,
+				2655518D2BC8FF7200213F00 /* AlamofireDynamic in Frameworks */,
 				5EB254E42B96C1BE00194E2D /* FirebaseAnalyticsSwift in Frameworks */,
 				5EB255082B96C1BE00194E2D /* FirebaseMLModelDownloader in Frameworks */,
 				5EB254E62B96C1BE00194E2D /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -93,6 +103,7 @@
 				5EB255062B96C1BE00194E2D /* FirebaseInstallations in Frameworks */,
 				5EB2550E2B96C1BE00194E2D /* FirebaseRemoteConfig in Frameworks */,
 				5EB255122B96C1BE00194E2D /* FirebaseStorage in Frameworks */,
+				2655518B2BC8FF7200213F00 /* Alamofire in Frameworks */,
 				5EB254F22B96C1BE00194E2D /* FirebaseDatabase in Frameworks */,
 				5EB255142B96C1BE00194E2D /* FirebaseStorageCombine-Community in Frameworks */,
 				5EB051192B90395500F34C0F /* Lottie in Frameworks */,
@@ -106,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EBBF6902BCD8FDE002289BF /* CleanedDataset */ = {
+			isa = PBXGroup;
+			children = (
+				3EBBF6972BCDA012002289BF /* DoctorTest.mlmodel */,
+				3EBBF6952BCD9048002289BF /* DatasetSpecialistAssignment.csv */,
+			);
+			path = CleanedDataset;
+			sourceTree = "<group>";
+		};
 		5E3A9BD62B8437EC009576EA = {
 			isa = PBXGroup;
 			children = (
@@ -125,18 +145,20 @@
 		5E3A9BE12B8437EC009576EA /* dr_online */ = {
 			isa = PBXGroup;
 			children = (
-				5E4076AA2BCDBB85000437C7 /* CleanedDataset */,
+				3EBBF6902BCD8FDE002289BF /* CleanedDataset */,
 				5E3A9BF72B8438A9009576EA /* SupportingFiles */,
 				5E3A9BE62B8437EC009576EA /* LoginViewController.swift */,
 				5E704AF22B97DCB8002BDD73 /* SignUpViewController.swift */,
 				5E3A9BE82B8437EC009576EA /* Main.storyboard */,
-				5E283FAF2BC9D0FD00D5FC5D /* ReportsVC.swift */,
 				5E09800B2BABE78A008502FE /* SelfTestVC.swift */,
+				265551872BC8FF3600213F00 /* APIModel.swift */,
 				5E3A9BEB2B8437F0009576EA /* Assets.xcassets */,
 				5E3A9BED2B8437F0009576EA /* LaunchScreen.storyboard */,
 				5E3A9BF02B8437F0009576EA /* Info.plist */,
 				5EB254DC2B96C12600194E2D /* GoogleService-Info.plist */,
 				5E19D7462BA9F81700BEF110 /* HomeScreenVC.swift */,
+				3EBBF6992BCDBB4F002289BF /* DoctorListVC.swift */,
+				3E58A2122BD02A10002E1610 /* ProfileVC.swift */,
 			);
 			path = dr_online;
 			sourceTree = "<group>";
@@ -146,17 +168,9 @@
 			children = (
 				5E3A9BE22B8437EC009576EA /* AppDelegate.swift */,
 				5E3A9BE42B8437EC009576EA /* SceneDelegate.swift */,
+				3E58A2142BD02ACF002E1610 /* DefaultHelper.swift */,
 			);
 			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		5E4076AA2BCDBB85000437C7 /* CleanedDataset */ = {
-			isa = PBXGroup;
-			children = (
-				5E4076AB2BCDBC7C000437C7 /* DoctorTest.mlmodel */,
-				5E4076A82BCDBB85000437C7 /* DatasetSpecialistAssignment.csv */,
-			);
-			path = CleanedDataset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +218,8 @@
 				5EB2550F2B96C1BE00194E2D /* FirebaseRemoteConfigSwift */,
 				5EB255112B96C1BE00194E2D /* FirebaseStorage */,
 				5EB255132B96C1BE00194E2D /* FirebaseStorageCombine-Community */,
+				2655518A2BC8FF7200213F00 /* Alamofire */,
+				2655518C2BC8FF7200213F00 /* AlamofireDynamic */,
 			);
 			productName = dr_online;
 			productReference = 5E3A9BDF2B8437EC009576EA /* dr_online.app */;
@@ -236,6 +252,7 @@
 			packageReferences = (
 				5EB051172B90395500F34C0F /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				5EB254DE2B96C1BE00194E2D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				265551892BC8FF7200213F00 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 5E3A9BE02B8437EC009576EA /* Products */;
 			projectDirPath = "";
@@ -252,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E3A9BEF2B8437F0009576EA /* LaunchScreen.storyboard in Resources */,
+				3EBBF6962BCD9048002289BF /* DatasetSpecialistAssignment.csv in Resources */,
 				5EB254DD2B96C12600194E2D /* GoogleService-Info.plist in Resources */,
 				5E3A9BEC2B8437F0009576EA /* Assets.xcassets in Resources */,
 				5E3A9BEA2B8437EC009576EA /* Main.storyboard in Resources */,
@@ -265,12 +283,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265551882BC8FF3600213F00 /* APIModel.swift in Sources */,
 				5E3A9BE72B8437EC009576EA /* LoginViewController.swift in Sources */,
-				5E283FB02BC9D0FD00D5FC5D /* ReportsVC.swift in Sources */,
+				3EBBF69A2BCDBB4F002289BF /* DoctorListVC.swift in Sources */,
+				3E58A2132BD02A10002E1610 /* ProfileVC.swift in Sources */,
 				5E3A9BE32B8437EC009576EA /* AppDelegate.swift in Sources */,
 				5E704AF32B97DCB8002BDD73 /* SignUpViewController.swift in Sources */,
+				3E58A2152BD02ACF002E1610 /* DefaultHelper.swift in Sources */,
 				5E19D7472BA9F81700BEF110 /* HomeScreenVC.swift in Sources */,
-				5E4076AC2BCDBC7D000437C7 /* DoctorTest.mlmodel in Sources */,
+				3EBBF6982BCDA012002289BF /* DoctorTest.mlmodel in Sources */,
 				5E09800C2BABE78A008502FE /* SelfTestVC.swift in Sources */,
 				5E3A9BE52B8437EC009576EA /* SceneDelegate.swift in Sources */,
 			);
@@ -495,6 +516,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		265551892BC8FF7200213F00 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 		5EB051172B90395500F34C0F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -514,6 +543,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2655518A2BC8FF7200213F00 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 265551892BC8FF7200213F00 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2655518C2BC8FF7200213F00 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 265551892BC8FF7200213F00 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
 		5EB051182B90395500F34C0F /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5EB051172B90395500F34C0F /* XCRemoteSwiftPackageReference "lottie-ios" */;
