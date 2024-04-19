@@ -19,8 +19,6 @@ Prototype:- <br><br>
 •	Once the user loggs in the home screen will appear<br>
 •	Navigation to self test screen/report screen is based on user’s selection in home screen.  <br><br>
 
-![image](https://github.com/JayanthMaturu/44643Sec03Team05Spring2024FinalProject/assets/143036932/d17d1e51-9c90-42ad-9a96-0847e7068b58) <br>
-•	Once the doctor logs in the doctor home screen will appear. <br><br>
 
 
 
