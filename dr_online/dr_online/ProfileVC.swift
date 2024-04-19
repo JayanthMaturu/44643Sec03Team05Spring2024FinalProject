@@ -3,19 +3,19 @@ import Firebase
 import PDFKit
 
 class ProfileVC: UIViewController {
-
+    
     // Outlets
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var mobile: UILabel!
     @IBOutlet weak var age: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUserInfo()
         getUserData()
     }
-
+    
     func getUserData() {
         let db = Firestore.firestore()
         let userRef = db.collection("users").document(DefaultHelper.shared.getUID())
@@ -63,21 +63,21 @@ class ProfileVC: UIViewController {
             }
         }
     }
-
+    
     private func setupUserInfo() {
         name.text = "Name: " + DefaultHelper.shared.getName().capitalized
         email.text = "Email: " + DefaultHelper.shared.getEmail().capitalized
         mobile.text = "Mobile: " + (DefaultHelper.shared.getMobile() ?? "")
     }
-
+    
     @IBAction func onDownload(_ sender: Any) {
         generateAndSavePDF()
     }
-
+    
     func generateAndSavePDF() {
         let pdfData = createFlyer()
         let pdfURL = FileManager.default.temporaryDirectory.appendingPathComponent("profile.pdf")
-
+        
         do {
             try pdfData.write(to: pdfURL)
             sharePDF(at: pdfURL)
@@ -85,7 +85,7 @@ class ProfileVC: UIViewController {
             print("Error saving PDF: \(error.localizedDescription)")
         }
     }
-
+    
     func sharePDF(at url: URL) {
         let documentInteractionController = UIDocumentInteractionController(url: url)
         documentInteractionController.delegate = self
@@ -107,11 +107,11 @@ extension ProfileVC {
         ]
         let format = UIGraphicsPDFRendererFormat()
         format.documentInfo = pdfMetaData as [String: Any]
-
+        
         let pageWidth = 8.5 * 72.0
         let pageHeight = 11 * 72.0
         let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
-
+        
         let renderer = UIGraphicsPDFRenderer(bounds: pageRect, format: format)
         let data = renderer.pdfData { (context) in
             context.beginPage()
@@ -126,7 +126,7 @@ extension ProfileVC {
                 """
             text.draw(at: CGPoint(x: 20, y: 20), withAttributes: attributes)
         }
-
+        
         return data
     }
 }

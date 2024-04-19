@@ -11,17 +11,17 @@ import FirebaseAuth
 import Firebase
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var LaunchLAV: LottieAnimationView!{
         didSet{
             LaunchLAV.animation = LottieAnimation.named("Animation_app")
             LaunchLAV.alpha = 1
             LaunchLAV.play{ [weak self] _ in
-                       UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1.0, delay: 0.0, options: [.curveEaseInOut]){
-                            self?.LaunchLAV.alpha = 0.0
-                        }
-                    }
+                UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1.0, delay: 0.0, options: [.curveEaseInOut]){
+                    self?.LaunchLAV.alpha = 0.0
                 }
+            }
+        }
     }
     
     @IBOutlet weak var emailTF: UITextField!
@@ -31,22 +31,22 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         
-       
+        
     }
-
+    
     @IBAction func loginbutton(_ sender: Any) {
         guard let email = emailTF.text, let password = passwordTF.text else { return }
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-        
+            
             //guard let strongSelf = self else { return }
             if error != nil {
                 self?.alert(message: "Invalid Username/ Password. Try Again")
             } else {
                 print("reached here")
                 
-              
+                
                 if let user = authResult?.user {
-                                DefaultHelper.shared.saveUID(uid: user.uid)
+                    DefaultHelper.shared.saveUID(uid: user.uid)
                 }
                 DefaultHelper.shared.saveData(name: "", email: email, mobile: "", dob: "")
                 self?.performSegue(withIdentifier: "homescreensegue", sender: nil)
@@ -56,19 +56,19 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgetpassword(_ sender: Any) {
         guard let email = emailTF.text, !email.isEmpty else {
-                    alert(message: "enter email address.")
-                    return
-                }
-
-                Auth.auth().sendPasswordReset(withEmail: email) { error in
-                    if let error = error {
-                        // Handle password reset error
-                        self.alert(message: "Password reset error: \(error.localizedDescription)")
-                    } else {
-                        // Password reset email sent successfully
-                        self.alert(message: "Password reset email sent successfully")
-                    }
-                }
+            alert(message: "enter email address.")
+            return
+        }
+        
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                // Handle password reset error
+                self.alert(message: "Password reset error: \(error.localizedDescription)")
+            } else {
+                // Password reset email sent successfully
+                self.alert(message: "Password reset email sent successfully")
+            }
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +81,7 @@ class LoginViewController: UIViewController {
         })
         present(alert, animated: true, completion: nil)
     }
-
-
+    
+    
 }
 

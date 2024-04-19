@@ -106,25 +106,25 @@ class SignUpViewController: UIViewController {
         }
         return true
     }
-        func isValidGmailAddress(email: String) -> Bool {
-            let pattern = "^[A-Z0-9._%+-]+@gmail\\.com$"
-            let regex = try! NSRegularExpression(pattern: pattern, options: [.caseInsensitive])
-            return regex.firstMatch(in: email, options: [], range: NSRange(location: 0, length: email.utf16.count)) != nil
-        }
+    func isValidGmailAddress(email: String) -> Bool {
+        let pattern = "^[A-Z0-9._%+-]+@gmail\\.com$"
+        let regex = try! NSRegularExpression(pattern: pattern, options: [.caseInsensitive])
+        return regex.firstMatch(in: email, options: [], range: NSRange(location: 0, length: email.utf16.count)) != nil
+    }
+    
+    func isValidPassword(_ password: String) -> Bool {
+        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~])[A-Za-z\\d#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{8,}$"
         
-        func isValidPassword(_ password: String) -> Bool {
-            let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~])[A-Za-z\\d#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{8,}$"
-            
-            let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
-            return passwordTest.evaluate(with: password)
-        }
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        return passwordTest.evaluate(with: password)
+    }
     private func alert(message : String){
         let alert = UIAlertController(title: "Password", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                    // Perform your action here
+            // Perform your action here
             self.performSegue(withIdentifier: "homescreensegue", sender: nil)
-                }
-                
+        }
+        
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }

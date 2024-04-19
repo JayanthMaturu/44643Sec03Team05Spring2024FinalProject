@@ -7,7 +7,7 @@ class DoctorListVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     var selectedSymptoms: [String] = []
     var filteredDoctors: [Doctor] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -15,7 +15,7 @@ class DoctorListVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         self.tableView.dataSource = self
         self.title = "Doctor List"
         self.tableView.register(UINib(nibName: "DoctorCell", bundle: nil), forCellReuseIdentifier: "DoctorCell")
-
+        
         
         if doctors.isEmpty {
             DataManager().loadDoctors { result in
@@ -41,7 +41,7 @@ class DoctorListVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                     break
                 }
                 
-                 
+                
             }
             
         }
