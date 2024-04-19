@@ -1,12 +1,13 @@
 # 44643Sec03Team05Spring2024FinalProject
 
-We are planning to develop Dr. Online app. This app brings the user to  make Doctors appointment by entering his/her symptoms which will predict diseases and list the famous  doctors related to predicted disease.The  user will be able to view doctor consultations reports  and also download the reports. Doctors are only capable of editing updating the patients’ records.
+We are planning to develop Dr. Online app. This app brings the user to  make Doctors 
+list by entering his/her symptoms which will predict diseases specialist  and list the famous  doctors related to predicted disease specialist.The  user will be able to view  reports  and also download the reports.
 The main target users of our app are Patients ,Doctors.
 
-The features that we  would like to implement is to predict the diseases based on the user entered symptoms. User can see doctor list  based on disease  through online which makes very user-friendly interface .
+The features that we  would like to implement is to predict the diseases  specialist based on the user entered symptoms. User can see doctor list  based on disease specialist  through online which makes very user-friendly interface .
 The user can use reports functionality which is to be implemented to see the reports of the user. The user will be able to download the report in .PDF format.
 
-Everyone started Working on individual task collected dataset for diseases prediction using symptoms list. choosen logo for project.
+Everyone started Working on individual task collected dataset for diseases specialist prediction using symptoms list. choosen logo for project.
 
 Implemented Sign up and login page and created ml and started api.Completed the ui part for ml and firebase database yet to use for storing patient information and use for download option.
 
